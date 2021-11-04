@@ -6,7 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var vegetableRouter = require('./routes/vegetable');
+var addmodsRouter = require('./routes/addmods');
+var selectorRouter = require('./routes/selector');
 var app = express();
 
 // view engine setup
@@ -18,6 +20,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/vegetable', vegetableRouter);
+app.use('/addmods', addmodsRouter);
+app.use('/selector', selectorRouter);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
