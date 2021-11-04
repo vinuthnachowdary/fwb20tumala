@@ -1,20 +1,35 @@
 extends layout
 
 block content
-  h1= title 
-  br
-  - var results = [{type: "potato",price: 4.5, weight: 2lb},{type: "tomato",price: 5.6,weight: 4lb},{type: "cabbage",price: 2.7,weight: 3lb}];
-   div(class = "container-fluid")
-    div(class = "row")
-     each i,index in results
-        div(class="col-sm-4" onclick=`buy(${index})`) flavour: #{i.type} 
-        br
-        br 
-        div(class="col-sm-4" onclick=`buy(${index})`) price: #{i.price}
-        br
-        br  
-        div(class="col-sm-4" onclick=`buy(${index})`) toppings: #{i.weight}
-        script.
-                function buy(itemNo){
-                    alert(`You purchased item ${itemNo+1}`)
-                }
+  h1= title
+  p search results for vegetables 
+  p 
+    div(class="container-fluid")
+      div(class="row")
+        -
+            let vegetables  = [
+              {
+                "name": "Potato",
+                "color": "4.5" ,
+                "weight": 2
+              },
+              {
+                "name": "Tomato",
+                "color": "5.6" ,
+                "weight": 4
+              },
+              {
+                "name": "Cabbage",
+                "color": "2.7" ,
+                "weight": 3
+              },                   
+                ]
+        each v,index in vegetables  
+            div(class="col-sm-2" onclick=`buy(${index})`) #{v.name}
+            div(class="col-sm-2" onclick=`buy(${index})`) #{v.color}
+            div(class="col-sm-2" onclick=`buy(${index})`) #{v.weight}
+    script.                
+        function buy(intemNo)
+        {
+              alert(`you purchased Item ${intemNo+1}`)
+        }
