@@ -1,3 +1,10 @@
 # fwb20tumala
 
-adding README file
+
+
+Class - vegetable class vegetable{ constructor(type,price,weight){
+    this.type = type;
+    this.price = price;
+    this.weight = weight;
+}
+}

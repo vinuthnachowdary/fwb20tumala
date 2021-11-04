@@ -14,7 +14,7 @@
     "pug": "^3.0.2"
   },
   "main": "app.js",
-  "author": "",
+  "author": "satya tummala",
   "license": "ISC",
-  "description": ""
+  "description": "package for lab10"
 }
