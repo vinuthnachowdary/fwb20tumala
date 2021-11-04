@@ -7,4 +7,4 @@ Class - vegetable class vegetable{ constructor(type,price,weight){
     this.price = price;
     this.weight = weight;
 }
-}
+
