@@ -2,12 +2,12 @@ extends layout
 
 block content
   h1= title
-  p search results for vegetables 
+  p search results for vegetable 
   p 
     div(class="container-fluid")
       div(class="row")
         -
-            let vegetables  = [
+            let vegetable  = [
               {
                 "name": "Potato",
                 "color": "4.5" ,
@@ -24,7 +24,7 @@ block content
                 "weight": 3
               },                   
                 ]
-        each v,index in vegetables  
+        each v,index in vegetable  
             div(class="col-sm-2" onclick=`buy(${index})`) #{v.name}
             div(class="col-sm-2" onclick=`buy(${index})`) #{v.color}
             div(class="col-sm-2" onclick=`buy(${index})`) #{v.weight}
